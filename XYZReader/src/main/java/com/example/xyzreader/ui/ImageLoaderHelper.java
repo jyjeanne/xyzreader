@@ -19,7 +19,7 @@ public class ImageLoaderHelper {
         return sInstance;
     }
 
-    private final LruCache<String, Bitmap> mImageCache = new LruCache<String, Bitmap>(20);
+    private final LruCache<String, Bitmap> mImageCache = new LruCache<>(20);
     private ImageLoader mImageLoader;
 
     private ImageLoaderHelper(Context applicationContext) {
@@ -42,3 +42,4 @@ public class ImageLoaderHelper {
         return mImageLoader;
     }
 }
+
